@@ -10,7 +10,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.conteiner}>
       <Text style={styles.title}>Biohacking App</Text>
-      <
+      
       </View>
       );
   }
