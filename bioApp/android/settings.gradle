@@ -1,0 +1,3 @@
+rootProject.name = 'bioApp'
+
+include ':app'
