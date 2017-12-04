@@ -12,7 +12,7 @@ export default class tableView extends Component<{}> {
     	<View style={styles.container}>
     	<FlatList 
     	data = {this.props.info}
-    	renderItem = {({item}) => <Text style= {styles.text}>{item.key}</Text>}
+    	renderItem = {({item}) => <Text style= {styles.text}>{item}</Text>}
     	/>
     	</View>
     	);
