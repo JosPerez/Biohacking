@@ -6,8 +6,15 @@ import {
   View,
   StatusBar
 } from 'react-native';
-import Login from './src/pages/login'
-import TableViewData from './src/pages/TableViewData'
+import { StackNavigator } from 'react-navigation';
+
+import Login from './src/pages/login';
+import TableViewData from './src/pages/TableViewData';
+
+export const StackNav = StackNavigator({
+  Home: { screen: Login },
+  BLE: {screen: TableViewData}
+});
 
 export default class App extends Component<{}> {
   render() {
@@ -16,7 +23,7 @@ export default class App extends Component<{}> {
       <StatusBar
       barStyle="dark-content"
       />
-      <Login/>
+      <StackNav/>
       </View>
     );
   }

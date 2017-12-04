@@ -7,14 +7,18 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-export default class Login extends Component<{}> {
-  render() {
-    return (
 
+export default class Login extends Component<{}> {
+	static navigationOptions = {
+		header: null,
+  };
+  render() {
+  	const { navigate } = this.props.navigation;
+    return (
     	<View style={styles.container}>
     	<Text style={styles.title}>BioHacking</Text>
     	<Text style={styles.subtitle}>Termociclador</Text>
-    	<TouchableOpacity style = {styles.button}>
+    	<TouchableOpacity style = {styles.button}  onPress={() => navigate('BLE')}>
     	<Text style={styles.buttonText}>Conectar Con Bluetooth</Text>
     	</TouchableOpacity>
     	<TouchableOpacity style = {styles.button}>
